@@ -20,12 +20,12 @@ public class DTGoogleCalendar {
         return googleCalendar
     }
     
-    public func events(callback: @escaping(_ events: [DTGoogleEventItem], _ error: Error?) -> Void) {
+    public func events(maxResult: Int = 100, timeMin: Date = Date(), callback: @escaping(_ events: [DTGoogleEventItem], _ error: Error?) -> Void) {
         service.authorizer = googleUser.authentication.fetcherAuthorizer()
         
         let query = GTLRCalendarQuery_EventsList.query(withCalendarId: "primary")
-        query.maxResults = 100
-        query.timeMin = GTLRDateTime(date: Date())
+        query.maxResults = maxResult
+        query.timeMin = GTLRDateTime(date: timeMin)
         query.singleEvents = false
         self.service.executeQuery(query, completionHandler: { (ticket, response, error) in
             var events: [DTGoogleEventItem] = []
