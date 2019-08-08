@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/cocoapods/l/DTSocialMediaLogin.svg?style=flat)](http://cocoapods.org/pods/DTSocialMediaLogin)
 [![Platform](https://img.shields.io/cocoapods/p/DTSocialMediaLogin?style=flat)](http://cocoapods.org/pods/DTSocialMediaLogin)
 
-Accessing Google Calendar on iOS with ease. This library will handle the login as well for you.  
+Read Google Calendar Events on iOS with ease. This library will handle the login as well for you.  
 
 ## Requirements
 * Base SDK: iOS 12
@@ -24,7 +24,7 @@ pod ‘DTGoogleCalendar’
 This library is using [FBSDKCoreKit](https://cocoapods.org/pods/FBSDKCoreKit), [FBSDKLoginKit](https://cocoapods.org/pods/FBSDKLoginKit), [GoogleSignIn](https://cocoapods.org/pods/GoogleSignIn), [OAuthSwift](https://cocoapods.org/pods/OAuthSwift), [DTSocialMediaLogin](https://cocoapods.org/pods/DTSocialMediaLogin), [GoogleAPIClientForREST](https://cocoapods.org/pods/GoogleAPIClientForREST)
 
 ## Setting Up
-Please follow along the instruction on: [DTSocialMediaLogin Github page](https://github.com/didats/DTSocialMediaLogin). You will need to verify on Google Developer Console that you are a verified Developer to use the Google Calendar API.
+Please follow along the instruction on: [DTSocialMediaLogin Github page](https://github.com/didats/DTSocialMediaLogin). Please also remember, to be able to use the Google Calendar API for public, you will need to [verify on Google Developer Console that you are a verified Developer](https://support.google.com/cloud/answer/7454865?hl=en). 
 
 ## URL Schemes
 Please follow along the instruction on: [DTSocialMediaLogin Github page](https://github.com/didats/DTSocialMediaLogin)
@@ -72,7 +72,7 @@ override func viewDidLoad() {
 // on button action
 @IBAction func googleClicked(_ sender: Any) {
   // Remove Readonly if you wanted to get read & write permission
-	socialMedia.scopes = [kGTLRAuthScopeCalendarReadonly]
+  socialMedia.scopes = [kGTLRAuthScopeCalendarReadonly]
   socialMedia.login(with: .Google, from: self) { (error, user) in
       guard let user = user else {
           return
