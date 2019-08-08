@@ -1,35 +1,30 @@
 # DTGoogleCalendar
 
 ![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)
-[![Version](https://img.shields.io/cocoapods/v/DTSocialMediaLogin.svg?style=flat)](http://cocoapods.org/pods/DTSocialMediaLogin)
-[![License](https://img.shields.io/cocoapods/l/DTSocialMediaLogin.svg?style=flat)](http://cocoapods.org/pods/DTSocialMediaLogin)
-[![Platform](https://img.shields.io/cocoapods/p/DTSocialMediaLogin?style=flat)](http://cocoapods.org/pods/DTSocialMediaLogin)
 
-Read Google Calendar Events on iOS with ease. This library will handle the login as well for you.  
+Read Google Calendar User's events on iOS with ease.
 
 ## Requirements
 * Base SDK: iOS 12
 * Deployment Target: iOS 10.0 or greater
 
-## Installation with Cocoapods
-Add following in your Podfile
-
-```
-pod ‘DTGoogleCalendar’
-```
-
 ## Dependencies
 This library is using [FBSDKCoreKit](https://cocoapods.org/pods/FBSDKCoreKit), [FBSDKLoginKit](https://cocoapods.org/pods/FBSDKLoginKit), [GoogleSignIn](https://cocoapods.org/pods/GoogleSignIn), [OAuthSwift](https://cocoapods.org/pods/OAuthSwift), [DTSocialMediaLogin](https://cocoapods.org/pods/DTSocialMediaLogin), [GoogleAPIClientForREST](https://cocoapods.org/pods/GoogleAPIClientForREST)
 
 ## Setting Up
+Add following in your Podfile:
+
+```
+pod ‘DTSocialMediaLogin’
+```
+
 Please follow along the instruction on: [DTSocialMediaLogin Github page](https://github.com/didats/DTSocialMediaLogin). Please also remember, to be able to use the Google Calendar API for public, you will need to [verify on Google Developer Console that you are a verified Developer](https://support.google.com/cloud/answer/7454865?hl=en). 
 
 ## URL Schemes
 Please follow along the instruction on: [DTSocialMediaLogin Github page](https://github.com/didats/DTSocialMediaLogin)
 
 ## Usage
-
-The few steps will be the same as `DTSocialMediaLogin` as it need to login to Google Platform prior asking Calendar API. Anyway, I will rewrite it here.
+You gonna need to copy the `DTGoogleCalendar.swift` and `DTGoogleEventItem.swift` to your project, and implement the code below: 
 
 Open your `AppDelegate.swift`
 
