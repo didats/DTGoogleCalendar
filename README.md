@@ -16,6 +16,7 @@ Add following in your Podfile:
 
 ```
 pod ‘DTSocialMediaLogin’
+pod 'GoogleAPIClientForREST'
 ```
 
 Please follow along the instruction on: [DTSocialMediaLogin Github page](https://github.com/didats/DTSocialMediaLogin). Please also remember, to be able to use the Google Calendar API for public, you will need to [verify on Google Developer Console that you are a verified Developer](https://support.google.com/cloud/answer/7454865?hl=en). 
